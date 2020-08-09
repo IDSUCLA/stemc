@@ -1,0 +1,359 @@
+
+#dev_addr: '10.142.0.2:80'
+#dev_addr: '0.0.0.0:80'
+site_url: 'http://stemc.idsucla.org'
+plugins: []
+#plugins:
+#  - pdf-export:
+#        verbose: true
+
+site_name: STEM-C Introduction to Data Science Curriculum v_5.0
+markdown_extensions:
+  - admonition
+  - pymdownx.arithmatex
+  
+theme:
+    name: material
+    feature:
+        tabs: true
+    palette:
+        primary: orange
+        accent: orange
+
+nav:
+    - Home: index.md
+    - Table of Contents: table.md
+    - Overview & Philosophy: overview.md
+    - Scope and Sequence: scope.md
+    - Unit1:
+        - Daily Overview: unit1/overview.md
+        - Essential Concepts: unit1/essential.md
+        - 'Section 1': 
+            - 'Data Are All Around':    unit1/section1.md
+            - 'Lesson 1: Data Trails' : unit1/lesson1.md
+            - 'Lesson 2: Stick Figures' : unit1/lesson2.md
+            - 'Lesson 3: Data Structures' : unit1/lesson3.md
+            - 'Lesson 4: The Data Cycle' : unit1/lesson4.md
+            - 'Lesson 5: So Many Questions' : unit1/lesson5.md
+            - 'Lesson 6: What Do I Eat?' : unit1/lesson6.md
+            - 'Lesson 7: Setting the Stage' : unit1/lesson7.md
+            - 'Campaign Guidelines – Food Habits' : unit1/campaign1.md
+        - 'Section 2': 
+            - 'Visualizing Data':    unit1/section2.md
+            - 'Lesson 8: Tangible Plots' : unit1/lesson8.md
+            - 'Lesson 9: What is Typical?' : unit1/lesson9.md
+            - 'Lesson 10: Making Histograms' : unit1/lesson10.md
+            - 'Lesson 11: What Shape Are You In?' : unit1/lesson11.md
+            - 'Lesson 12: Exploring Food Habits' : unit1/lesson12.md
+            - 'Lesson 13: RStudio Basics' : unit1/lesson13.md
+            - 'Lab 1A - Data, Code & RStudio' : unit1/lab1a.md
+            - 'Lab 1B: Get the Picture?' : unit1/lab1b.md
+            - 'Lab 1C: Export, Upload, Import' : unit1/lab1c.md
+            - 'Lesson 14: Variables, Variables, Variables' : unit1/lesson14.md
+            - 'Lab 1D: Zooming Through Data' : unit1/lab1d.md
+            - 'Lab 1E: What’s the Relationship?' : unit1/lab1e.md
+            - 'Practicum: The Data Cycle & My Food Habits' : unit1/practicum1.md
+        - 'Section 3':
+            - 'Would You Look at the Time!':    unit1/section3.md
+            - 'Lesson 15: Americans’ Time on Task' : unit1/lesson15.md
+            - 'Campaign Guidelines – Time Use' : unit1/campaign2.md
+            - 'Lab 1F: A Diamond in the Rough' : unit1/lab1f.md
+            - 'Lesson 16: Categorical Associations' : unit1/lesson16.md
+            - 'Lesson 17: Interpreting Two-Way Tables' : unit1/lesson17.md
+            - 'Lab 1G: What’s the FREQ?' : unit1/lab1g.md
+            - 'Practicum: Teen Depression' : unit1/practicum2.md
+            - 'Lab 1H: Our Time' : unit1/lab1h.md
+            - 'End of Unit Project and Oral Presentation: Analyzing Data to Evaluate Claims' : unit1/end.md
+        # - Lessons:
+        #     - 'Lesson 1: Data Trails' : unit1/lesson1.md
+        #     - 'Lesson 2: Stick Figures' : unit1/lesson2.md
+        #     - 'Lesson 3: Data Structures' : unit1/lesson3.md
+        #     - 'Lesson 4: The Data Cycle' : unit1/lesson4.md
+        #     - 'Lesson 5: So Many Questions' : unit1/lesson5.md
+        #     - 'Lesson 6: What Do I Eat?' : unit1/lesson6.md
+        #     - 'Lesson 7: Setting the Stage' : unit1/lesson7.md
+        #     - 'Lesson 8: Tangible Plots' : unit1/lesson8.md
+        #     - 'Lesson 9: What is Typical?' : unit1/lesson9.md
+        #     - 'Lesson 10: Making Histograms' : unit1/lesson10.md
+        #     - 'Lesson 11: What Shape Are You In?' : unit1/lesson11.md
+        #     - 'Lesson 12: Exploring Food Habits' : unit1/lesson12.md
+        #     - 'Lesson 13: RStudio Basics' : unit1/lesson13.md
+        #     - 'Lesson 14: Variables, Variables, Variables' : unit1/lesson14.md
+        #     - 'Lesson 15: Americans’ Time on Task' : unit1/lesson15.md
+        #     - 'Lesson 16: Categorical Associations' : unit1/lesson16.md
+        #     - 'Lesson 17: Interpreting Two-Way Tables' : unit1/lesson17.md
+        # - Labs:
+        #     - 'Lab 1A - Data, Code & RStudio' : unit1/lab1a.md
+        #     - 'Lab 1B: Get the Picture?' : unit1/lab1b.md
+        #     - 'Lab 1C: Export, Upload, Import' : unit1/lab1c.md
+        #     - 'Lab 1D: Zooming Through Data' : unit1/lab1d.md
+        #     - 'Lab 1E: What’s the Relationship?' : unit1/lab1e.md
+        #     - 'Lab 1F: A Diamond in the Rough' : unit1/lab1f.md
+        #     - 'Lab 1G: What’s the FREQ?' : unit1/lab1g.md
+        #     - 'Lab 1H: Our Time' : unit1/lab1h.md
+    - Unit2:
+        - Daily Overview: unit2/overview.md
+        - Essential Concepts: unit2/essential.md
+        - 'Section 1': 
+            - 'What is Your True Color?':    unit2/section1.md
+            - 'Lesson 1: What is Your True Color?' : unit2/lesson1.md
+            - 'Lesson 2: What Does Mean Mean?' : unit2/lesson2.md
+            - 'Lesson 3: Median in the Middle' : unit2/lesson3.md
+            - 'Lesson 4: How Far is it from Typical?' : unit2/lesson4.md
+            - 'Lab 2A - All About Distributions' : unit2/lab2a.md
+            - 'Lesson 5: Human Boxplots' : unit2/lesson5.md
+            - 'Lesson 6: Face Off' : unit2/lesson6.md
+            - 'Lesson 7: Plot Match' : unit2/lesson7.md
+            - 'Lab 2B - Oh the Summaries ...' : unit2/lab2b.md
+            - 'Practicum: The Summaries' : unit2/practicum1.md
+        - 'Section 2': 
+            - 'How Likely is it?':    unit2/section2.md
+            - 'Lesson 8: How Likely Is It?' : unit2/lesson8.md
+            - 'Lesson 9: Bias Detective' : unit2/lesson9.md
+            - 'Lesson 10: Marbles, Marbles…' : unit2/lesson10.md
+            - 'Lab 2C - Which Song Plays Next?' : unit2/lab2c.md
+            - 'Lesson 11: This AND/OR That' : unit2/lesson11.md
+            - 'Lab 2D - Queue It Up!' : unit2/lab2d.md
+            - 'Practicum: Win, Win, Win' : unit2/practicum2.md
+        - 'Section 3':
+            - 'What Are the Chances That You Are Stressing or Chilling?':    unit2/section3.md  
+            - 'Lesson 12: Don’t Take My Stress Away!' : unit2/lesson12.md
+            - 'Campaign Guidelines – Stress/Chill' : unit2/campaign1.md
+            - 'Lesson 13: The Horror Movie Shuffle' : unit2/lesson13.md
+            - 'Lab 2E - The Horror Movie Shuffle' : unit2/lab2e.md
+            - 'Lesson 14: The Titanic Shuffle' : unit2/lesson14.md
+            - 'Lab 2F - The Titanic Shuffle' : unit2/lab2f.md
+            - 'Lesson 15: Tangible Data Merging' : unit2/lesson15.md
+            - 'Lab 2G - Getting It Together' : unit2/lab2g.md
+            - 'Practicum: What Stresses Us?' : unit2/practicum3.md
+        - 'Section 4':  
+            - 'What’s Normal?':    unit2/section4.md  
+            - 'Lesson 16: What Is Normal?' : unit2/lesson16.md
+            - 'Lesson 17: A Normal Measure of Spread' : unit2/lesson17.md
+            - 'Lesson 18: What’s Your Z-Score?' : unit2/lesson18.md
+            - 'Lab 2H - Eyeballing Normal' : unit2/lab2h.md
+            - 'Lab 2I - R’s Normal Distribution Alphabet' : unit2/lab2i.md
+            - 'End of Unit Project: Asking and Answering Statistical Questions of Our Own Data' : unit2/end.md
+        # - 'Lesson 1: What is Your True Color?' : unit2/lesson1.md
+        # - 'Lesson 2: What Does Mean Mean?' : unit2/lesson2.md
+        # - 'Lesson 3: Median in the Middle' : unit2/lesson3.md
+        # - 'Lesson 4: How Far is it from Typical?' : unit2/lesson4.md
+        # - 'Lesson 5: Human Boxplots' : unit2/lesson5.md
+        # - 'Lesson 6: Face Off' : unit2/lesson6.md
+        # - 'Lesson 7: Plot Match' : unit2/lesson7.md
+        # - 'Lesson 8: How Likely Is It?' : unit2/lesson8.md
+        # - 'Lesson 9: Bias Detective' : unit2/lesson9.md
+        # - 'Lesson 10: Marbles, Marbles…' : unit2/lesson10.md
+        # - 'Lesson 11: This AND/OR That' : unit2/lesson11.md
+        # - 'Lesson 12: What Does Mean Mean?' : unit2/lesson12.md
+        # - 'Lesson 13: The Horror Movie Shuffle' : unit2/lesson13.md
+        # - 'Lesson 14: The Titanic Shuffle' : unit2/lesson14.md
+        # - 'Lesson 15: Tangible Data Merging' : unit2/lesson15.md
+        # - 'Lesson 16: What Is Normal?' : unit2/lesson16.md
+        # - 'Lesson 17: A Normal Measure of Spread' : unit2/lesson17.md
+        # - 'Lesson 18: Shuffling with Normal?' : unit2/lesson18.md
+        # - 'Lab 2A - All About Distributions' : unit2/lab2a.md
+        # - 'Lab 2B - Oh the Summaries ...' : unit2/lab2b.md
+        # - 'Lab 2C - Which Song Plays Next?' : unit2/lab2c.md
+        # - 'Lab 2D - Queue It Up!' : unit2/lab2d.md
+        # - 'Lab 2E - The Horror Movie Shuffle' : unit2/lab2e.md
+        # - 'Lab 2F - The Titanic Shuffle' : unit2/lab2f.md
+        # - 'Lab 2G - Getting It Together' : unit2/lab2g.md
+        # - 'Lab 2H - Eyeballing Normal' : unit2/lab2h.md
+        # - 'Lab 2I - R’s Normal Distribution Alphabet' : unit2/lab2i.md
+        # - 'Practicum: The Summaries' : unit2/practicum1.md
+        # - 'Practicum: Win, Win, Win' : unit2/practicum2.md
+        # - 'Practicum: What Stresses Us?' : unit2/practicum3.md
+    - Unit3:
+        - 'Daily Overview' : unit3/overview.md
+        - 'Essential Concepts': unit3/essential.md
+        - 'Section 1': 
+            - 'Testing, Testing…1, 2, 3…' : unit3/section1.md
+            - 'Lesson 1: Anecdotes vs. Data' : unit3/lesson1.md
+            - 'Lesson 2: What Is an Experiment?' : unit3/lesson2.md
+            - 'Lesson 3:Let’s Try an Experiment!' : unit3/lesson3.md
+            - 'Lesson 4: Predictions, Predictions' : unit3/lesson4.md
+            - 'Lesson 5: Time Perception Experiment' : unit3/lesson5.md
+            - 'Lab 3A: The Results Are In!' : unit3/lab3a.md
+            - 'Practicum: Music to my Ears' : unit3/practicum1.md  
+        - 'Section 2': 
+            - 'Would You Look at That?' : unit3/section2.md
+            - 'Lesson 6: Observational Studies' : unit3/lesson6.md
+            - 'Lesson 7: Observational Studies vs. Experiments' : unit3/lesson7.md
+            - 'Lesson 8: Monsters That Hide in Observational Studies' : unit3/lesson8.md
+            - 'Lab 3B: Confound It All!' : unit3/lab3b.md
+        - 'Section 3': 
+            - 'Are You Asking Me?' : unit3/section3.md
+            - 'Lesson 9: Survey Says…' : unit3/lesson9.md
+            - 'Lesson 10: We’re So Random' : unit3/lesson10.md
+            - 'Lesson 11: The Gettysburg Address' : unit3/lesson11.md
+            - 'Lab 3C: Random Sampling' : unit3/lab3c.md
+            - 'Lesson 12: Bias in Survey Sampling' : unit3/lesson12.md
+            - 'Lesson 13: The Confidence Game' : unit3/lesson13.md
+            - 'Lesson 14: How Confident Are You?' : unit3/lesson14.md
+            - 'Lab 3D: Are You Sure about That?' : unit3/lab3d.md
+            - 'Practicum: Let’s Build a Survey!' : unit3/practicum2.md  
+        - 'Section 4': 
+            - 'What’s the Trigger?' : unit3/section4.md
+            - 'Lesson 15: Ready, Sense, Go!' : unit3/lesson15.md
+            - 'Lesson 16: Does It Have a Trigger?' : unit3/lesson16.md
+            - 'Lesson 17: Creating Our Own Participatory Sensing Campaign' : unit3/lesson17.md
+            - 'Lesson 18: Evaluating Our Own Participatory Sensing Campaign' : unit3/lesson18.md
+            - 'Lesson 19: Implementing Our Own Participatory Sensing Campaign' : unit3/lesson19.md
+        - 'Section 5': 
+            - 'Webpages' : unit3/section5.md
+            - 'Lesson 20: Online Data-ing' : unit3/lesson20.md
+            - 'Lab 3E: Scraping Web Data' : unit3/lab3e.md
+            - 'Lab 3F: Maps' : unit3/lab3f.md 
+            - 'Lesson 21: Learning to Love XML' : unit3/lesson21.md
+            - 'Lesson 22: Changing Orientation' : unit3/lesson22.md
+            - 'Practicum: What Does Our Campaign Data Say?' : unit3/practicum3.md 
+            - 'End of Unit Project: TB or Not TB' : unit3/end.md 
+        # - Sections:
+        #     - 'Section 1: Testing, Testing…1, 2, 3…' : unit3/section1.md
+        #     - 'Section 2: Would You Look at That?' : unit3/section2.md
+        #     - 'Section 3: Are You Asking Me?' : unit3/section3.md
+        #     - 'Section 4: What’s the Trigger?' : unit3/section4.md
+        #     - 'Section 5: Webpages' : unit3/section5.md
+        # - Lessons:
+        #     - 'Lesson 1: Anecdotes vs. Data' : unit3/lesson1.md
+        #     - 'Lesson 2: What Is an Experiment?' : unit3/lesson2.md
+        #     - 'Lesson 3:Let’s Try an Experiment!' : unit3/lesson3.md
+        #     - 'Lesson 4: Predictions, Predictions' : unit3/lesson4.md
+        #     - 'Lesson 5: Time Perception Experiment' : unit3/lesson5.md
+        #     - 'Lesson 6: Observational Studies' : unit3/lesson6.md
+        #     - 'Lesson 7: Observational Studies vs. Experiments' : unit3/lesson7.md
+        #     - 'Lesson 8: Monsters That Hide in Observational Studies' : unit3/lesson8.md
+        #     - 'Lesson 9: Survey Says…' : unit3/lesson9.md
+        #     - 'Lesson 10: We’re So Random' : unit3/lesson10.md
+        #     - 'Lesson 11: The Gettysburg Address' : unit3/lesson11.md
+        #     - 'Lesson 12: Bias in Survey Sampling' : unit3/lesson12.md
+        #     - 'Lesson 13: The Confidence Game' : unit3/lesson13.md
+        #     - 'Lesson 14: How Confident Are You?' : unit3/lesson14.md
+        #     - 'Lesson 15 Ready, Sense, Go!' : unit3/lesson15.md
+        #     - 'Lesson 16: Does It Have a Trigger?' : unit3/lesson16.md
+        #     - 'Lesson 17: Creating Our Own Participatory Sensing Campaign' : unit3/lesson17.md
+        #     - 'Lesson 18: Evaluating Our Own Participatory Sensing Campaign' : unit3/lesson18.md
+        #     - 'Lesson 19: Implementing Our Own Participatory Sensing Campaign' : unit3/lesson19.md
+        #     - 'Lesson 20: Online Data-ing' : unit3/lesson20.md
+        #     - 'Lesson 21: Learning to Love XML' : unit3/lesson21.md
+        #     - 'Lesson 22: Changing Orientation' : unit3/lesson22.md
+        # - Labs:
+        #     - 'Lab 3A: The Results Are In!' : unit3/lab3a.md
+        #     - 'Lab 3B: Confound It All!' : unit3/lab3b.md
+        #     - 'Lab 3C: Random Sampling' : unit3/lab3c.md
+        #     - 'Lab 3D: Are You Sure about That?' : unit3/lab3d.md
+        #     - 'Lab 3E: Scraping Web Data' : unit3/lab3e.md
+        #     - 'Lab 3F: Maps' : unit3/lab3f.md    
+        # - Practicums:
+        #     - 'Practicum: Music to my Ears' : unit3/practicum1.md   
+        #     - 'Practicum: Let’s Build a Survey!' : unit3/practicum2.md   
+        #     - 'Practicum: What Does Our Campaign Data Say?' : unit3/practicum3.md   
+        # - 'End of Unit Project: TB or Not TB' : unit3/end.md 
+    - Unit4:
+        - 'Daily Overview' : unit4/overview.md
+        - 'Essential Concepts': unit4/essential.md
+        - 'Section 1': 
+            - 'Predictions and Models' : unit4/section1.md
+            - 'Lesson 1: Water Usage' : unit4/lesson1.md
+            - 'Lesson 2: Exploring Water Usage' : unit4/lesson2.md
+            - 'Lesson 3: Evaluating and Implementing a Water Campaign' : unit4/lesson3.md
+            - 'Lesson 4: Refining the Water Campaign' : unit4/lesson4.md
+            - 'Lesson 5: Statistical Predictions Using One Variable' : unit4/lesson5.md
+            - 'Lesson 6: Statistical Predictions by Applying the Rule' : unit4/lesson6.md
+            - 'Lesson 7: Statistical Predictions Using Two Variables' : unit4/lesson7.md
+            - 'LAB 4A: If the Line Fits…' : unit4/lab4a.md
+            - 'LAB 4B: What’s the Score?' : unit4/lab4b.md
+            - 'Lesson 8: What’s the Trend?' : unit4/lesson8.md
+            - 'Lesson 9: Spaghetti Line' : unit4/lesson9.md
+            - 'LAB 4C: Cross-Validation' : unit4/lab4c.md
+            - 'Lesson 10: Predicting Values' : unit4/lesson10.md
+            - 'Lesson 11: How Strong Is It?' : unit4/lesson11.md
+            - 'LAB 4D: Interpreting Correlations' : unit4/lab4d.md
+        - 'Section 2': 
+            - 'Piecing It Together' : unit4/section2.md
+            - 'Lesson 12: More Variables to Make Better Predictions' : unit4/lesson12.md
+            - 'Lesson 13: Combination of Variables' : unit4/lesson13.md
+            - 'LAB 4E: This Model Is Big Enough for All of Us' : unit4/lab4e.md
+            - 'Practicum: Predictions' : unit4/practicum1.md
+            - 'Lesson 14: Improving your Model' : unit4/lesson14.md
+            - 'LAB 4F: Some Models Have Curves' : unit4/lab4f.md
+        - 'Section 3': 
+            - 'The Growth of Landfills' : unit4/section3.md
+            - 'Lesson 15: The Growth of Landfills' : unit4/lesson15.md
+            - 'Lesson 16: Exploring Trash Via the Dashboard' : unit4/lesson16.md
+            - 'Lesson 17: Exploring Trash Via RStudio' : unit4/lesson17.md
+        - 'Section 4': 
+            - 'Decisions, Decisions!' : unit4/section4.md
+            - 'Lesson 18: Grow Your Own Decision Tree' : unit4/lesson18.md
+            - 'Lesson 19: Data Scientists or Doctors?' : unit4/lesson19.md
+            - 'LAB 4G: Growing Trees' : unit4/lab4g.md            
+        - 'Section 5': 
+            - 'Ties That Bind' : unit4/section5.md
+            - 'Lesson 20: Where Do I Belong?' : unit4/lesson20.md
+            - 'LAB 4H: Finding Clusters' : unit4/lab4h.md            
+            - 'Lesson 21: Our Class Network' : unit4/lesson21.md
+            - 'End of Unit 3 and 4 Design Project and Oral Presentation: Water Usage' : unit4/end.md
+
+        # - Sections:
+        #     - 'Section 1: Predictions and Models' : unit4/section1.md
+        #     - 'Section 2: Piecing It Together' : unit4/section2.md
+        #     - 'Section 3: The Growth of Landfills' : unit4/section3.md
+        #     - 'Section 4: Decisions, Decisions!' : unit4/section4.md
+        #     - 'Section 5: Ties That Bind' : unit4/section5.md
+        # - Lessons:
+        #     - 'Lesson 1: Water Usage' : unit4/lesson1.md
+        #     - 'Lesson 2: Exploring Water Usage' : unit4/lesson2.md
+        #     - 'Lesson 3: Evaluating and Implementing a Water Campaign' : unit4/lesson3.md
+        #     - 'Lesson 4: Refining the Water Campaign' : unit4/lesson4.md
+        #     - 'Lesson 5: Statistical Predictions Using One Variable' : unit4/lesson5.md
+        #     - 'Lesson 6: Statistical Predictions by Applying the Rule' : unit4/lesson6.md
+        #     - 'Lesson 7: Statistical Predictions Using Two Variables' : unit4/lesson7.md
+        #     - 'Lesson 8: What’s the Trend?' : unit4/lesson8.md
+        #     - 'Lesson 9: Spaghetti Line' : unit4/lesson9.md
+        #     - 'Lesson 10: Predicting Values' : unit4/lesson10.md
+        #     - 'Lesson 11: How Strong Is It?' : unit4/lesson11.md
+        #     - 'Lesson 12: More Variables to Make Better Predictions' : unit4/lesson12.md
+        #     - 'Lesson 13: Combination of Variables' : unit4/lesson13.md
+        #     - 'Lesson 14: Improving your Model' : unit4/lesson14.md
+        #     - 'Lesson 15: The Growth of Landfills' : unit4/lesson15.md
+        #     - 'Lesson 16: Exploring Trash Via the Dashboard' : unit4/lesson16.md
+        #     - 'Lesson 17: Exploring Trash Via RStudio' : unit4/lesson17.md
+        #     - 'Lesson 18: Grow Your Own Decision Tree' : unit4/lesson18.md
+        #     - 'Lesson 19: Data Scientists or Doctors?' : unit4/lesson19.md
+        #     - 'Lesson 20: Where Do I Belong?' : unit4/lesson20.md
+        #     - 'Lesson 21: Our Class Network' : unit4/lesson21.md
+        # - Labs:
+        #     - 'LAB 4A: If the Line Fits…' : unit4/lab4a.md
+        #     - 'LAB 4B: What’s the Score?' : unit4/lab4b.md
+        #     - 'LAB 4C: Cross-Validation' : unit4/lab4c.md
+        #     - 'LAB 4D: Interpreting Correlations' : unit4/lab4d.md
+        #     - 'LAB 4E: This Model Is Big Enough for All of Us' : unit4/lab4e.md
+        #     - 'LAB 4F: Some Models Have Curves' : unit4/lab4f.md
+        #     - 'LAB 4G: Growing Trees' : unit4/lab4g.md
+        #     - 'LAB 4H: Finding Clusters' : unit4/lab4h.md
+        # - Practicums:
+        #     - 'Practicum: Predictions' : unit4/practicum1.md
+        # - 'End of Unit 3 and 4 Design Project and Oral Presentation: Water Usage' : unit4/end.md
+    - PDF: 
+        - 'IDS_Curriculum' : download/curriculum.md
+        - 'IDS_LMRs' : download/lmrs.md
+        - 'IDS_Lab Response Sheets' : download/labs.md
+        - 'IDS_Teacher Resources' : download/resources.md
+    - Downloads:
+        - 'IDS_Curriculum_v_5.0' : download/IDS_Curriculum_v_5.0.md 
+        - 'IDS_Curriculum_v_4.0 for LAUSD' : download/IDS_Curriculum_v_4.0.md 
+        - 'Mobilize Algebra I' : download/Algebra.md
+        - 'Mobilize Biology' : download/Biology.md
+    - App Downloads: download/app.md
+    - How to .. Video: 
+        - 'How to .. Video' :  video.md
+    - About: about.md
+
+google_analytics: ['UA-149684808-1', 'stemc.idsucla.org']
+
+#plugins:
+#    - search:
+#        lang: en
+#        separator: '[\s\-]+'
+#dev_addr: '192.168.0.9:80'
