@@ -1,0 +1,3322 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+        <link rel="canonical" href="http://stemc.idsucla.org/unit2/lesson8/">
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+    
+    
+      
+        <title>Lesson 8: How Likely Is It? - STEM-C Introduction to Data Science Curriculum v_5.0</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.30686662.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#fb8c00">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-149684808-1", "stemc.idsucla.org")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="orange" data-md-color-accent="orange">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#lesson-8-how-likely-is-it" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="http://stemc.idsucla.org" title="STEM-C Introduction to Data Science Curriculum v_5.0" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              STEM-C Introduction to Data Science Curriculum v_5.0
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Lesson 8: How Likely Is It?
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../.." class="md-tabs__link">
+        Home
+      </a>
+    
+  </li>
+
+      
+        
+      
+        
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../unit1/overview/" class="md-tabs__link">
+          Unit1
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../overview/" class="md-tabs__link md-tabs__link--active">
+          Unit2
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../unit3/overview/" class="md-tabs__link">
+          Unit3
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../unit4/overview/" class="md-tabs__link">
+          Unit4
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../download/curriculum/" class="md-tabs__link">
+          PDF
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../download/IDS_Curriculum_v_5.0/" class="md-tabs__link">
+          Downloads
+        </a>
+      
+    </li>
+  
+
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../video/" class="md-tabs__link">
+          How to .. Video
+        </a>
+      
+    </li>
+  
+
+      
+        
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="http://stemc.idsucla.org" title="STEM-C Introduction to Data Science Curriculum v_5.0" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    STEM-C Introduction to Data Science Curriculum v_5.0
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../table/" title="Table of Contents" class="md-nav__link">
+      Table of Contents
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../overview/" title="Overview & Philosophy" class="md-nav__link">
+      Overview & Philosophy
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../scope/" title="Scope and Sequence" class="md-nav__link">
+      Scope and Sequence
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Unit1
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Unit1
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit1/overview/" title="Daily Overview" class="md-nav__link">
+      Daily Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit1/essential/" title="Essential Concepts" class="md-nav__link">
+      Essential Concepts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-3" type="checkbox" id="nav-5-3">
+    
+    <label class="md-nav__link" for="nav-5-3">
+      Section 1
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-3">
+        Section 1
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit1/section1/" title="Data Are All Around" class="md-nav__link">
+      Data Are All Around
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit1/lesson1/" title="Lesson 1: Data Trails" class="md-nav__link">
+      Lesson 1: Data Trails
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit1/lesson2/" title="Lesson 2: Stick Figures" class="md-nav__link">
+      Lesson 2: Stick Figures
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit1/lesson3/" title="Lesson 3: Data Structures" class="md-nav__link">
+      Lesson 3: Data Structures
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit1/lesson4/" title="Lesson 4: The Data Cycle" class="md-nav__link">
+      Lesson 4: The Data Cycle
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit1/lesson5/" title="Lesson 5: So Many Questions" class="md-nav__link">
+      Lesson 5: So Many Questions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit1/lesson6/" title="Lesson 6: What Do I Eat?" class="md-nav__link">
+      Lesson 6: What Do I Eat?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit1/lesson7/" title="Lesson 7: Setting the Stage" class="md-nav__link">
+      Lesson 7: Setting the Stage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit1/campaign1/" title="Campaign Guidelines – Food Habits" class="md-nav__link">
+      Campaign Guidelines – Food Habits
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-4" type="checkbox" id="nav-5-4">
+    
+    <label class="md-nav__link" for="nav-5-4">
+      Section 2
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-4">
+        Section 2
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit1/section2/" title="Visualizing Data" class="md-nav__link">
+      Visualizing Data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit1/lesson8/" title="Lesson 8: Tangible Plots" class="md-nav__link">
+      Lesson 8: Tangible Plots
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit1/lesson9/" title="Lesson 9: What is Typical?" class="md-nav__link">
+      Lesson 9: What is Typical?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit1/lesson10/" title="Lesson 10: Making Histograms" class="md-nav__link">
+      Lesson 10: Making Histograms
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit1/lesson11/" title="Lesson 11: What Shape Are You In?" class="md-nav__link">
+      Lesson 11: What Shape Are You In?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit1/lesson12/" title="Lesson 12: Exploring Food Habits" class="md-nav__link">
+      Lesson 12: Exploring Food Habits
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit1/lesson13/" title="Lesson 13: RStudio Basics" class="md-nav__link">
+      Lesson 13: RStudio Basics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit1/lab1a/" title="Lab 1A - Data, Code & RStudio" class="md-nav__link">
+      Lab 1A - Data, Code & RStudio
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit1/lab1b/" title="Lab 1B: Get the Picture?" class="md-nav__link">
+      Lab 1B: Get the Picture?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit1/lab1c/" title="Lab 1C: Export, Upload, Import" class="md-nav__link">
+      Lab 1C: Export, Upload, Import
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit1/lesson14/" title="Lesson 14: Variables, Variables, Variables" class="md-nav__link">
+      Lesson 14: Variables, Variables, Variables
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit1/lab1d/" title="Lab 1D: Zooming Through Data" class="md-nav__link">
+      Lab 1D: Zooming Through Data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit1/lab1e/" title="Lab 1E: What’s the Relationship?" class="md-nav__link">
+      Lab 1E: What’s the Relationship?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit1/practicum1/" title="Practicum: The Data Cycle & My Food Habits" class="md-nav__link">
+      Practicum: The Data Cycle & My Food Habits
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-5" type="checkbox" id="nav-5-5">
+    
+    <label class="md-nav__link" for="nav-5-5">
+      Section 3
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-5">
+        Section 3
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit1/section3/" title="Would You Look at the Time!" class="md-nav__link">
+      Would You Look at the Time!
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit1/lesson15/" title="Lesson 15: Americans’ Time on Task" class="md-nav__link">
+      Lesson 15: Americans’ Time on Task
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit1/campaign2/" title="Campaign Guidelines – Time Use" class="md-nav__link">
+      Campaign Guidelines – Time Use
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit1/lab1f/" title="Lab 1F: A Diamond in the Rough" class="md-nav__link">
+      Lab 1F: A Diamond in the Rough
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit1/lesson16/" title="Lesson 16: Categorical Associations" class="md-nav__link">
+      Lesson 16: Categorical Associations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit1/lesson17/" title="Lesson 17: Interpreting Two-Way Tables" class="md-nav__link">
+      Lesson 17: Interpreting Two-Way Tables
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit1/lab1g/" title="Lab 1G: What’s the FREQ?" class="md-nav__link">
+      Lab 1G: What’s the FREQ?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit1/practicum2/" title="Practicum: Teen Depression" class="md-nav__link">
+      Practicum: Teen Depression
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit1/lab1h/" title="Lab 1H: Our Time" class="md-nav__link">
+      Lab 1H: Our Time
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit1/end/" title="End of Unit Project and Oral Presentation: Analyzing Data to Evaluate Claims" class="md-nav__link">
+      End of Unit Project and Oral Presentation: Analyzing Data to Evaluate Claims
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+    
+    <label class="md-nav__link" for="nav-6">
+      Unit2
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Unit2
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../overview/" title="Daily Overview" class="md-nav__link">
+      Daily Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../essential/" title="Essential Concepts" class="md-nav__link">
+      Essential Concepts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-3" type="checkbox" id="nav-6-3">
+    
+    <label class="md-nav__link" for="nav-6-3">
+      Section 1
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-3">
+        Section 1
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../section1/" title="What is Your True Color?" class="md-nav__link">
+      What is Your True Color?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lesson1/" title="Lesson 1: What is Your True Color?" class="md-nav__link">
+      Lesson 1: What is Your True Color?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lesson2/" title="Lesson 2: What Does Mean Mean?" class="md-nav__link">
+      Lesson 2: What Does Mean Mean?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lesson3/" title="Lesson 3: Median in the Middle" class="md-nav__link">
+      Lesson 3: Median in the Middle
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lesson4/" title="Lesson 4: How Far is it from Typical?" class="md-nav__link">
+      Lesson 4: How Far is it from Typical?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lab2a/" title="Lab 2A - All About Distributions" class="md-nav__link">
+      Lab 2A - All About Distributions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lesson5/" title="Lesson 5: Human Boxplots" class="md-nav__link">
+      Lesson 5: Human Boxplots
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lesson6/" title="Lesson 6: Face Off" class="md-nav__link">
+      Lesson 6: Face Off
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lesson7/" title="Lesson 7: Plot Match" class="md-nav__link">
+      Lesson 7: Plot Match
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lab2b/" title="Lab 2B - Oh the Summaries ..." class="md-nav__link">
+      Lab 2B - Oh the Summaries ...
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../practicum1/" title="Practicum: The Summaries" class="md-nav__link">
+      Practicum: The Summaries
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-4" type="checkbox" id="nav-6-4" checked>
+    
+    <label class="md-nav__link" for="nav-6-4">
+      Section 2
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-4">
+        Section 2
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../section2/" title="How Likely is it?" class="md-nav__link">
+      How Likely is it?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Lesson 8: How Likely Is It?
+      </label>
+    
+    <a href="./" title="Lesson 8: How Likely Is It?" class="md-nav__link md-nav__link--active">
+      Lesson 8: How Likely Is It?
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lesson-8-how-likely-is-it" class="md-nav__link">
+    Lesson 8: How Likely Is It?
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objective" class="md-nav__link">
+    Objective:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#materials" class="md-nav__link">
+    Materials:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vocabulary" class="md-nav__link">
+    Vocabulary:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#essential-concepts" class="md-nav__link">
+    Essential Concepts:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lesson" class="md-nav__link">
+    Lesson:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-scribes" class="md-nav__link">
+    Class Scribes:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#homework" class="md-nav__link">
+    Homework
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lesson9/" title="Lesson 9: Bias Detective" class="md-nav__link">
+      Lesson 9: Bias Detective
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lesson10/" title="Lesson 10: Marbles, Marbles…" class="md-nav__link">
+      Lesson 10: Marbles, Marbles…
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lab2c/" title="Lab 2C - Which Song Plays Next?" class="md-nav__link">
+      Lab 2C - Which Song Plays Next?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lesson11/" title="Lesson 11: This AND/OR That" class="md-nav__link">
+      Lesson 11: This AND/OR That
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lab2d/" title="Lab 2D - Queue It Up!" class="md-nav__link">
+      Lab 2D - Queue It Up!
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../practicum2/" title="Practicum: Win, Win, Win" class="md-nav__link">
+      Practicum: Win, Win, Win
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-5" type="checkbox" id="nav-6-5">
+    
+    <label class="md-nav__link" for="nav-6-5">
+      Section 3
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-5">
+        Section 3
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../section3/" title="What Are the Chances That You Are Stressing or Chilling?" class="md-nav__link">
+      What Are the Chances That You Are Stressing or Chilling?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lesson12/" title="Lesson 12: Don’t Take My Stress Away!" class="md-nav__link">
+      Lesson 12: Don’t Take My Stress Away!
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../campaign1/" title="Campaign Guidelines – Stress/Chill" class="md-nav__link">
+      Campaign Guidelines – Stress/Chill
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lesson13/" title="Lesson 13: The Horror Movie Shuffle" class="md-nav__link">
+      Lesson 13: The Horror Movie Shuffle
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lab2e/" title="Lab 2E - The Horror Movie Shuffle" class="md-nav__link">
+      Lab 2E - The Horror Movie Shuffle
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lesson14/" title="Lesson 14: The Titanic Shuffle" class="md-nav__link">
+      Lesson 14: The Titanic Shuffle
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lab2f/" title="Lab 2F - The Titanic Shuffle" class="md-nav__link">
+      Lab 2F - The Titanic Shuffle
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lesson15/" title="Lesson 15: Tangible Data Merging" class="md-nav__link">
+      Lesson 15: Tangible Data Merging
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lab2g/" title="Lab 2G - Getting It Together" class="md-nav__link">
+      Lab 2G - Getting It Together
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../practicum3/" title="Practicum: What Stresses Us?" class="md-nav__link">
+      Practicum: What Stresses Us?
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-6" type="checkbox" id="nav-6-6">
+    
+    <label class="md-nav__link" for="nav-6-6">
+      Section 4
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-6">
+        Section 4
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../section4/" title="What’s Normal?" class="md-nav__link">
+      What’s Normal?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lesson16/" title="Lesson 16: What Is Normal?" class="md-nav__link">
+      Lesson 16: What Is Normal?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lesson17/" title="Lesson 17: A Normal Measure of Spread" class="md-nav__link">
+      Lesson 17: A Normal Measure of Spread
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lesson18/" title="Lesson 18: What’s Your Z-Score?" class="md-nav__link">
+      Lesson 18: What’s Your Z-Score?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lab2h/" title="Lab 2H - Eyeballing Normal" class="md-nav__link">
+      Lab 2H - Eyeballing Normal
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lab2i/" title="Lab 2I - R’s Normal Distribution Alphabet" class="md-nav__link">
+      Lab 2I - R’s Normal Distribution Alphabet
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../end/" title="End of Unit Project: Asking and Answering Statistical Questions of Our Own Data" class="md-nav__link">
+      End of Unit Project: Asking and Answering Statistical Questions of Our Own Data
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Unit3
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Unit3
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit3/overview/" title="Daily Overview" class="md-nav__link">
+      Daily Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit3/essential/" title="Essential Concepts" class="md-nav__link">
+      Essential Concepts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-3" type="checkbox" id="nav-7-3">
+    
+    <label class="md-nav__link" for="nav-7-3">
+      Section 1
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-3">
+        Section 1
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit3/section1/" title="Testing, Testing…1, 2, 3…" class="md-nav__link">
+      Testing, Testing…1, 2, 3…
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit3/lesson1/" title="Lesson 1: Anecdotes vs. Data" class="md-nav__link">
+      Lesson 1: Anecdotes vs. Data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit3/lesson2/" title="Lesson 2: What Is an Experiment?" class="md-nav__link">
+      Lesson 2: What Is an Experiment?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit3/lesson3/" title="Lesson 3:Let’s Try an Experiment!" class="md-nav__link">
+      Lesson 3:Let’s Try an Experiment!
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit3/lesson4/" title="Lesson 4: Predictions, Predictions" class="md-nav__link">
+      Lesson 4: Predictions, Predictions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit3/lesson5/" title="Lesson 5: Time Perception Experiment" class="md-nav__link">
+      Lesson 5: Time Perception Experiment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit3/lab3a/" title="Lab 3A: The Results Are In!" class="md-nav__link">
+      Lab 3A: The Results Are In!
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit3/practicum1/" title="Practicum: Music to my Ears" class="md-nav__link">
+      Practicum: Music to my Ears
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-4" type="checkbox" id="nav-7-4">
+    
+    <label class="md-nav__link" for="nav-7-4">
+      Section 2
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-4">
+        Section 2
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit3/section2/" title="Would You Look at That?" class="md-nav__link">
+      Would You Look at That?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit3/lesson6/" title="Lesson 6: Observational Studies" class="md-nav__link">
+      Lesson 6: Observational Studies
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit3/lesson7/" title="Lesson 7: Observational Studies vs. Experiments" class="md-nav__link">
+      Lesson 7: Observational Studies vs. Experiments
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit3/lesson8/" title="Lesson 8: Monsters That Hide in Observational Studies" class="md-nav__link">
+      Lesson 8: Monsters That Hide in Observational Studies
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit3/lab3b/" title="Lab 3B: Confound It All!" class="md-nav__link">
+      Lab 3B: Confound It All!
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-5" type="checkbox" id="nav-7-5">
+    
+    <label class="md-nav__link" for="nav-7-5">
+      Section 3
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-5">
+        Section 3
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit3/section3/" title="Are You Asking Me?" class="md-nav__link">
+      Are You Asking Me?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit3/lesson9/" title="Lesson 9: Survey Says…" class="md-nav__link">
+      Lesson 9: Survey Says…
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit3/lesson10/" title="Lesson 10: We’re So Random" class="md-nav__link">
+      Lesson 10: We’re So Random
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit3/lesson11/" title="Lesson 11: The Gettysburg Address" class="md-nav__link">
+      Lesson 11: The Gettysburg Address
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit3/lab3c/" title="Lab 3C: Random Sampling" class="md-nav__link">
+      Lab 3C: Random Sampling
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit3/lesson12/" title="Lesson 12: Bias in Survey Sampling" class="md-nav__link">
+      Lesson 12: Bias in Survey Sampling
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit3/lesson13/" title="Lesson 13: The Confidence Game" class="md-nav__link">
+      Lesson 13: The Confidence Game
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit3/lesson14/" title="Lesson 14: How Confident Are You?" class="md-nav__link">
+      Lesson 14: How Confident Are You?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit3/lab3d/" title="Lab 3D: Are You Sure about That?" class="md-nav__link">
+      Lab 3D: Are You Sure about That?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit3/practicum2/" title="Practicum: Let’s Build a Survey!" class="md-nav__link">
+      Practicum: Let’s Build a Survey!
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-6" type="checkbox" id="nav-7-6">
+    
+    <label class="md-nav__link" for="nav-7-6">
+      Section 4
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-6">
+        Section 4
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit3/section4/" title="What’s the Trigger?" class="md-nav__link">
+      What’s the Trigger?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit3/lesson15/" title="Lesson 15: Ready, Sense, Go!" class="md-nav__link">
+      Lesson 15: Ready, Sense, Go!
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit3/lesson16/" title="Lesson 16: Does It Have a Trigger?" class="md-nav__link">
+      Lesson 16: Does It Have a Trigger?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit3/lesson17/" title="Lesson 17: Creating Our Own Participatory Sensing Campaign" class="md-nav__link">
+      Lesson 17: Creating Our Own Participatory Sensing Campaign
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit3/lesson18/" title="Lesson 18: Evaluating Our Own Participatory Sensing Campaign" class="md-nav__link">
+      Lesson 18: Evaluating Our Own Participatory Sensing Campaign
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit3/lesson19/" title="Lesson 19: Implementing Our Own Participatory Sensing Campaign" class="md-nav__link">
+      Lesson 19: Implementing Our Own Participatory Sensing Campaign
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7" type="checkbox" id="nav-7-7">
+    
+    <label class="md-nav__link" for="nav-7-7">
+      Section 5
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-7">
+        Section 5
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit3/section5/" title="Webpages" class="md-nav__link">
+      Webpages
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit3/lesson20/" title="Lesson 20: Online Data-ing" class="md-nav__link">
+      Lesson 20: Online Data-ing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit3/lab3e/" title="Lab 3E: Scraping Web Data" class="md-nav__link">
+      Lab 3E: Scraping Web Data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit3/lab3f/" title="Lab 3F: Maps" class="md-nav__link">
+      Lab 3F: Maps
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit3/lesson21/" title="Lesson 21: Learning to Love XML" class="md-nav__link">
+      Lesson 21: Learning to Love XML
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit3/lesson22/" title="Lesson 22: Changing Orientation" class="md-nav__link">
+      Lesson 22: Changing Orientation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit3/practicum3/" title="Practicum: What Does Our Campaign Data Say?" class="md-nav__link">
+      Practicum: What Does Our Campaign Data Say?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit3/end/" title="End of Unit Project: TB or Not TB" class="md-nav__link">
+      End of Unit Project: TB or Not TB
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Unit4
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        Unit4
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit4/overview/" title="Daily Overview" class="md-nav__link">
+      Daily Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit4/essential/" title="Essential Concepts" class="md-nav__link">
+      Essential Concepts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-3" type="checkbox" id="nav-8-3">
+    
+    <label class="md-nav__link" for="nav-8-3">
+      Section 1
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-3">
+        Section 1
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit4/section1/" title="Predictions and Models" class="md-nav__link">
+      Predictions and Models
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit4/lesson1/" title="Lesson 1: Water Usage" class="md-nav__link">
+      Lesson 1: Water Usage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit4/lesson2/" title="Lesson 2: Exploring Water Usage" class="md-nav__link">
+      Lesson 2: Exploring Water Usage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit4/lesson3/" title="Lesson 3: Evaluating and Implementing a Water Campaign" class="md-nav__link">
+      Lesson 3: Evaluating and Implementing a Water Campaign
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit4/lesson4/" title="Lesson 4: Refining the Water Campaign" class="md-nav__link">
+      Lesson 4: Refining the Water Campaign
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit4/lesson5/" title="Lesson 5: Statistical Predictions Using One Variable" class="md-nav__link">
+      Lesson 5: Statistical Predictions Using One Variable
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit4/lesson6/" title="Lesson 6: Statistical Predictions by Applying the Rule" class="md-nav__link">
+      Lesson 6: Statistical Predictions by Applying the Rule
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit4/lesson7/" title="Lesson 7: Statistical Predictions Using Two Variables" class="md-nav__link">
+      Lesson 7: Statistical Predictions Using Two Variables
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit4/lab4a/" title="LAB 4A: If the Line Fits…" class="md-nav__link">
+      LAB 4A: If the Line Fits…
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit4/lab4b/" title="LAB 4B: What’s the Score?" class="md-nav__link">
+      LAB 4B: What’s the Score?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit4/lesson8/" title="Lesson 8: What’s the Trend?" class="md-nav__link">
+      Lesson 8: What’s the Trend?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit4/lesson9/" title="Lesson 9: Spaghetti Line" class="md-nav__link">
+      Lesson 9: Spaghetti Line
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit4/lab4c/" title="LAB 4C: Cross-Validation" class="md-nav__link">
+      LAB 4C: Cross-Validation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit4/lesson10/" title="Lesson 10: Predicting Values" class="md-nav__link">
+      Lesson 10: Predicting Values
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit4/lesson11/" title="Lesson 11: How Strong Is It?" class="md-nav__link">
+      Lesson 11: How Strong Is It?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit4/lab4d/" title="LAB 4D: Interpreting Correlations" class="md-nav__link">
+      LAB 4D: Interpreting Correlations
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-4" type="checkbox" id="nav-8-4">
+    
+    <label class="md-nav__link" for="nav-8-4">
+      Section 2
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-4">
+        Section 2
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit4/section2/" title="Piecing It Together" class="md-nav__link">
+      Piecing It Together
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit4/lesson12/" title="Lesson 12: More Variables to Make Better Predictions" class="md-nav__link">
+      Lesson 12: More Variables to Make Better Predictions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit4/lesson13/" title="Lesson 13: Combination of Variables" class="md-nav__link">
+      Lesson 13: Combination of Variables
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit4/lab4e/" title="LAB 4E: This Model Is Big Enough for All of Us" class="md-nav__link">
+      LAB 4E: This Model Is Big Enough for All of Us
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit4/practicum1/" title="Practicum: Predictions" class="md-nav__link">
+      Practicum: Predictions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit4/lesson14/" title="Lesson 14: Improving your Model" class="md-nav__link">
+      Lesson 14: Improving your Model
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit4/lab4f/" title="LAB 4F: Some Models Have Curves" class="md-nav__link">
+      LAB 4F: Some Models Have Curves
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-5" type="checkbox" id="nav-8-5">
+    
+    <label class="md-nav__link" for="nav-8-5">
+      Section 3
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-5">
+        Section 3
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit4/section3/" title="The Growth of Landfills" class="md-nav__link">
+      The Growth of Landfills
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit4/lesson15/" title="Lesson 15: The Growth of Landfills" class="md-nav__link">
+      Lesson 15: The Growth of Landfills
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit4/lesson16/" title="Lesson 16: Exploring Trash Via the Dashboard" class="md-nav__link">
+      Lesson 16: Exploring Trash Via the Dashboard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit4/lesson17/" title="Lesson 17: Exploring Trash Via RStudio" class="md-nav__link">
+      Lesson 17: Exploring Trash Via RStudio
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-6" type="checkbox" id="nav-8-6">
+    
+    <label class="md-nav__link" for="nav-8-6">
+      Section 4
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-6">
+        Section 4
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit4/section4/" title="Decisions, Decisions!" class="md-nav__link">
+      Decisions, Decisions!
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit4/lesson18/" title="Lesson 18: Grow Your Own Decision Tree" class="md-nav__link">
+      Lesson 18: Grow Your Own Decision Tree
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit4/lesson19/" title="Lesson 19: Data Scientists or Doctors?" class="md-nav__link">
+      Lesson 19: Data Scientists or Doctors?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit4/lab4g/" title="LAB 4G: Growing Trees" class="md-nav__link">
+      LAB 4G: Growing Trees
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-7" type="checkbox" id="nav-8-7">
+    
+    <label class="md-nav__link" for="nav-8-7">
+      Section 5
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-7">
+        Section 5
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit4/section5/" title="Ties That Bind" class="md-nav__link">
+      Ties That Bind
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit4/lesson20/" title="Lesson 20: Where Do I Belong?" class="md-nav__link">
+      Lesson 20: Where Do I Belong?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit4/lab4h/" title="LAB 4H: Finding Clusters" class="md-nav__link">
+      LAB 4H: Finding Clusters
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit4/lesson21/" title="Lesson 21: Our Class Network" class="md-nav__link">
+      Lesson 21: Our Class Network
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../unit4/end/" title="End of Unit 3 and 4 Design Project and Oral Presentation: Water Usage" class="md-nav__link">
+      End of Unit 3 and 4 Design Project and Oral Presentation: Water Usage
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      PDF
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        PDF
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../download/curriculum/" title="IDS_Curriculum" class="md-nav__link">
+      IDS_Curriculum
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../download/lmrs/" title="IDS_LMRs" class="md-nav__link">
+      IDS_LMRs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../download/labs/" title="IDS_Lab Response Sheets" class="md-nav__link">
+      IDS_Lab Response Sheets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../download/resources/" title="IDS_Teacher Resources" class="md-nav__link">
+      IDS_Teacher Resources
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      Downloads
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        Downloads
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../download/IDS_Curriculum_v_5.0/" title="IDS_Curriculum_v_5.0" class="md-nav__link">
+      IDS_Curriculum_v_5.0
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../download/IDS_Curriculum_v_4.0/" title="IDS_Curriculum_v_4.0 for LAUSD" class="md-nav__link">
+      IDS_Curriculum_v_4.0 for LAUSD
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../download/Algebra/" title="Mobilize Algebra I" class="md-nav__link">
+      Mobilize Algebra I
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../download/Biology/" title="Mobilize Biology" class="md-nav__link">
+      Mobilize Biology
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../download/app/" title="App Downloads" class="md-nav__link">
+      App Downloads
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+    
+    <label class="md-nav__link" for="nav-12">
+      How to .. Video
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
+        How to .. Video
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../video/" title="How to .. Video" class="md-nav__link">
+      How to .. Video
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../about/" title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lesson-8-how-likely-is-it" class="md-nav__link">
+    Lesson 8: How Likely Is It?
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objective" class="md-nav__link">
+    Objective:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#materials" class="md-nav__link">
+    Materials:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vocabulary" class="md-nav__link">
+    Vocabulary:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#essential-concepts" class="md-nav__link">
+    Essential Concepts:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lesson" class="md-nav__link">
+    Lesson:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-scribes" class="md-nav__link">
+    Class Scribes:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#homework" class="md-nav__link">
+    Homework
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Lesson 8: How Likely Is It?</h1>
+                
+                <h2 id="lesson-8-how-likely-is-it"><strong><em><u>Lesson 8: How Likely Is It?</u></em></strong></h2>
+<h3 id="objective"><strong>Objective:</strong></h3>
+<p>Students will understand the basic rules of probability. They will learn that previous outcomes do not give
+information about future outcomes if the events are independent.</p>
+<h3 id="materials"><strong>Materials:</strong></h3>
+<ol>
+<li>
+<p>Video: “Heads” from the movie <em>Rosencrantz and Guildenstern are Dead</em> found at:<br>
+    <a href="https://www.youtube.com/watch?v=NbInZ5oJ0bc" title="https://www.youtube.com/watch?v=NbInZ5oJ0bc">https://www.youtube.com/watch?v=NbInZ5oJ0bc</a></p>
+<p><div align="right"><iframe width="420" height="315"
+src="https://www.youtube.com/embed/NbInZ5oJ0bc" allowfullscreen>
+</iframe><br><a href="https://www.youtube.com/embed/NbInZ5oJ0bc">https://www.youtube.com/embed/NbInZ5oJ0bc</a></div></p>
+</li>
+<li>
+<p>Projector for RStudio functions</p>
+</li>
+</ol>
+<h3 id="vocabulary"><strong>Vocabulary:</strong></h3>
+<p>probability, simulation, model, sample proportion, chance, independence</p>
+<h3 id="essential-concepts"><strong>Essential Concepts:</strong></h3>
+<div class="admonition note">
+<p class="admonition-title">Essential Concepts: </p>
+<p>Probability is an area that we humans have poor intuition about. Probability
+measures a long-run proportion: 50% chance means the event happens 50% of the time <em>if you repeated it
+forever</em>. When we don't repeat forever, we see variability.</p>
+</div>
+<h3 id="lesson"><strong>Lesson:</strong></h3>
+<ol>
+<li>
+<p>Have students consider possible synonyms to the word <strong>chance</strong>. If someone says, “That just
+happened by chance,” what does that mean? <span style="color:grey"><strong><em>Synonyms: possibility, prospect, expectation,
+unintentional, unplanned. The actual definition of chance is “a possibility of something
+happening.”</em></strong></span></p>
+</li>
+<li>
+<p>Ask the students which game – chess or the board game “Sorry” (<strong><u>Note:</u></strong> any game can be
+chosen) – is more based on chance? Why? <span style="color:grey"><strong><em>Sorry is more based on chance because many
+outcomes are determined by dice rolls. In chess, there are certain strategies and
+movements that can be planned, so it is more a game of skill. With Sorry, the players roll a
+die (number cube), so the numbers they roll have an impact on how well they do in the
+game.</em></strong></span></p>
+</li>
+<li>
+<p>Next, ask students if they can think of situations where chance is the only force at play. <span style="color:grey"><strong><em>Possible
+responses: card games, slot machines, the lottery, coin flipping, and rock, paper, scissors.</em></strong></span></p>
+</li>
+<li>
+<p>Play the “Heads” video from the movie <em>Rosencrantz and Guildenstern are Dead</em> found at:
+<a href="https://www.youtube.com/watch?v=NbInZ5oJ0bc" title="https://www.youtube.com/watch?v=NbInZ5oJ0bc">https://www.youtube.com/watch?v=NbInZ5oJ0bc</a>.</p>
+</li>
+<li>
+<p>In their DS journals, ask students to write down their initial reactions to the clip by responding to
+the following questions:</p>
+<ol>
+<li>
+<p>Is it <em>possible</em> to get 78 heads in a row when tossing a coin? <span style="color:grey"><strong><em>Yes, it is possible to get 78
+heads in a row since one coin toss does not determine the next coin toss.</em></strong></span></p>
+</li>
+<li>
+<p>Do you think it is <em>likely</em> to get 78 heads in a row? <span style="color:grey"><strong><em>No. Although it is possible to get 78
+heads in a row.</em></strong></span></p>
+</li>
+<li>
+<p>How many times should we get a heads when tossing a coin? <span style="color:grey"><strong><em>1 out of 2 times or 50% of
+the time.</em></strong></span></p>
+</li>
+<li>
+<p>On average, how many times should the characters have gotten a heads out of the 78
+tosses? <span style="color:grey"><strong><em>Roughly about 39 times.</em></strong></span></p>
+</li>
+</ol>
+</li>
+<li>
+<p>Ask students to discuss their findings with their team members and come to an agreement on
+their responses. Afterwards, conduct a <em>Whip Around</em> and ask each team to share its findings. Are
+there any differences between the teams? Any similarities?</p>
+</li>
+<li>
+<p>As teams share their responses, students should add to or revise their individual findings in their
+DS journals.</p>
+</li>
+<li>
+<p>Explain to students that, from the concept of chance, we can start learning about <strong>probability</strong>.
+Chance is simply the possibility that something will happen, and probability is a measurement for
+how often something happens in the “long run.” Students may have ideas about how to calculate
+probabilities based on prior classes or knowledge, but inform them that IDS will be taking a
+different approach – using simulations (see next step).</p>
+</li>
+<li>
+<p>Since we don’t want to actually flip a coin 78 times like the actors did in the video, we can have
+RStudio simulate them for us. A <strong>simulation</strong> is a way of creating random events that are close to
+real-life situations without actually doing them. It is a kind of <strong>model</strong>, which is a way of
+representing real world situations so that predictions can be made.</p>
+</li>
+<li>
+<p>Explain to students that R has a function that does coin flipping for us, and that it assumes an
+equal probability of heads and tails. Using a projector to display your computer screen to the
+whole class, demonstrate how to do one simulation of a coin flip in RStudio. Use the following
+function:</p>
+<p><strong>&gt; rflip(1)</strong></p>
+</li>
+<li>
+<p>Explain that the value of 1 in the argument part of the function tells R to flip the coin 1 time. If we
+want to flip the coin 10 times, we could simply change the function to <strong>rflip(10)</strong>.</p>
+</li>
+<li>
+<p>Run the function again using 10 as the number of times to flip the coin. Ask students:</p>
+<ol>
+<li>
+<p>How many heads (“H”s) were there? <span style="color:grey"><strong><em>Answers will vary for each sample.</em></strong></span></p>
+</li>
+<li>
+<p>How many Tails (“T”s) were there? <span style="color:grey"><strong><em>Answers will vary for each sample.</em></strong></span></p>
+</li>
+<li>
+<p>In the output, what does <strong>Flipping 10 coins [Prob(Heads) = 0.5]</strong> mean? <span style="color:grey"><strong><em>This is
+RStudio telling us that we are tossing the coin 10 times and that the</em></strong></span> <strong>probability</strong> <span style="color:grey"><strong><em>of
+getting heads should be 0.5 (it is flipping a fair coin).</em></strong></span></p>
+</li>
+<li>
+<p>In the output, what does <strong>Number of Heads: 3 [Proportion Heads: 0.3]</strong> mean?</p>
+<p><strong><u>Note:</u></strong> This is example output. Your sample may have a different value for the number of
+heads that appeared, and thus a different value for the proportion of heads. <span style="color:grey"><strong><em>This is
+RStudio telling us that in our sample, we got heads 3 out of the 10 times we flipped
+the coin. The</em></strong></span> <strong>sample proportion</strong> <span style="color:grey"><strong><em>is automatically calculated for us by dividing the
+number of heads by the total number of tosses (in this case, 3/10 = 0.3).</em></strong></span></p>
+</li>
+</ol>
+</li>
+<li>
+<p>To relate back to the video at the beginning of class, repeat the simulation once more, but use 78
+as the number of coin flips <strong>rflip(78)</strong>. Students should record answers to the following
+questions in the DS journals:</p>
+<ol>
+<li>
+<p>How many heads (“H”s) were there? Since we know to expect about 39 heads if the coin
+is fair, does the value seem reasonable? <span style="color:grey"><strong><em>Answers will vary for each sample. Most
+likely, you will see values near 39.</em></strong></span></p>
+</li>
+<li>
+<p>How many Tails (“T”s) were there? <span style="color:grey"><strong><em>Answers will vary for each sample.</em></strong></span></p>
+</li>
+<li>
+<p>What proportion of the coin flips were heads? <span style="color:grey"><strong><em>Answers will vary for each sample.</em></strong></span></p>
+</li>
+</ol>
+</li>
+<li>
+<p>Using the <strong>rflip(78)</strong> command, run the simulation a few more times (3 – 5) and have students
+record the values for the number of heads and the proportion of heads.</p>
+<p><span style="color:grey"><strong><em>As an example, we ran the function 3 times and saw the following values:</em></strong></span></p>
+<p><span style="color:grey"><strong><em>Sample 1 – amount of heads: 45</em></strong></span></p>
+<p><span style="color:grey"><strong><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;proportion of heads: 0.577</em></strong></span></p>
+<p><span style="color:grey"><strong><em>Sample 2 – amount of heads: 33</em></strong></span></p>
+<p><span style="color:grey"><strong><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;proportion of heads: 0.423</em></strong></span></p>
+<p><span style="color:grey"><strong><em>Sample 3 – amount of heads: 42</em></strong></span></p>
+<p><span style="color:grey"><strong><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;proportion of heads: 0.538</em></strong></span></p>
+</li>
+<li>
+<p>Have students answer the questions listed below. The important thing to note is that the values
+can and (almost always) WILL change each time you run the simulation to create a new sample.</p>
+<ol>
+<li>
+<p>How do the proportions of heads in the samples compare to each other? <span style="color:grey"><strong><em>Answers will
+vary.</em></strong></span></p>
+</li>
+<li>
+<p>How do the proportions of heads compare to the true probability of heads (1/2 or 50%)?
+<span style="color:grey"><strong><em>Answers will vary, but they should notice that most of the probabilities are close to
+50%.</em></strong></span></p>
+</li>
+<li>
+<p>Why is there a 50% chance of getting heads during each coin flip? <span style="color:grey"><strong><em>Since there are two
+sides to a coin, both should be equally likely to come up. So there is a 1 out of 2
+chance of getting heads and 1 out of 2 chance of getting tails.</em></strong></span></p>
+</li>
+</ol>
+</li>
+<li>
+<p>Next, pose the following question:</p>
+<ol>
+<li>If you get a heads on the first toss of a coin, will you definitely get a heads on the next
+toss? Will you definitely get a tails on the next toss? <span style="color:grey"><strong><em>No. One coin toss should not
+affect another coin toss. Each time you flip the coin, the chances of getting heads
+versus tails remains the same.</em></strong></span></li>
+</ol>
+</li>
+<li>
+<p>Introduce the concept of <strong>independence</strong>. Explain that, when tossing a fair coin, there is no
+relationship between each toss. The second toss does NOT depend on the first toss; therefore,
+the coin tosses are independent of each other.</p>
+</li>
+</ol>
+<h3 id="class-scribes"><strong>Class Scribes:</strong></h3>
+<p>One team of students will give a brief talk to discuss what they think the 3 most important topics of the
+day were.</p>
+<h3 id="homework"><p style="background: black; color: white; text-align: center;"><strong>Homework</strong></p></h3>
+<p>Students will create a Tweet (they do not have to post it online). Using 280 characters or fewer, write a
+Tweet about the meaning of probability.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../section2/" title="How Likely is it?" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                How Likely is it?
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../lesson9/" title="Lesson 9: Bias Detective" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Lesson 9: Bias Detective
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.ac79c3b0.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+  </body>
+</html>
